@@ -1,24 +1,25 @@
 var inputs = {};
 
 function getInputs() {
-  inputs['service'] = $('#service').val();
-  inputs['food'] = $('#food').val();
+  inputs['speed'] = $('#speed').val();
+  inputs['distance'] = $('#distance').val();
 }
 
 $(document).ready(function(){
 
   $('#calc').click(function(){
     getInputs();
+    $('td#speed').text(inputs['speed'])
+    $('td#distance').text(inputs['distance'])
     $.ajax({
         url: '/',
         type: 'POST',
-        data: inputs,
+        data: JSON.stringify(inputs),
+        contentType: 'application/json',
         success: function(data) {
             console.log('Wysłano dane wejsciowe');
-            $('#input-data').text("Dane wejsciowe")
-            $('#service-feed').text("Jakosc obslugi: " + data[0])
-            $('#food-feed').text("Jakosc jedzenia: " + data[1])
-            $('#tip').text("Wielkosc napiwka: ")},
+            $('.result-plot').html(data[0])
+            $('#power').text(data[1])},
         error: function(data) {
             console.log('ERROR - dane wejsciowe');
         }

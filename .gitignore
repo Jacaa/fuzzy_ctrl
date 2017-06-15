@@ -7,3 +7,4 @@
 # Ignore bundler config.
 /.vscode
 /venv/*
+/fuzzy.pyc
