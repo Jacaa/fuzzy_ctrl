@@ -1,2 +1,1 @@
-Przetestowac 
-Wyglad strony, walidacja wejsc
+Przetestowac

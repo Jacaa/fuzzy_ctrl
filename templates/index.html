@@ -17,18 +17,21 @@
         <div class="container">
           <div class="col-lg-10 col-lg-offset-1">
             <center><h1> Wspomaganie decyzji z wykorzystaniem logiki rozmytej </h1></center>
+            <center><h5> Uzyta biblioteka: 
+              <a href="https://github.com/scikit-fuzzy/scikit-fuzzy">SciKit-Fuzzy</a>
+            </h5></center>
           </div>
 
           <div class="row main-page">
             <div class="col-lg-4" id="inputs">
               <form>
                 <div class="form-group">
-                  <label for="speed">Predkosc: (0-20)</label>
-                  <input type="number" class="form-control" id="speed" min="0" max="20">
+                  <label for="speed">Predkosc: (1-19)</label>
+                  <input type="number" class="form-control" id="speed" min="1" max="19" value="1">
                 </div>
                 <div class="form-group">
-                  <label for="distance">Dystans (0-100):</label>
-                  <input type="number" class="form-control" id="distance" min="0" max="100">
+                  <label for="distance">Dystans (1-99):</label>
+                  <input type="number" class="form-control" id="distance" min="1" max="99" value="1">
                 </div>
                 <center><button type="button" class="btn btn-default" id="calc">Oblicz</button></center>
               </form>

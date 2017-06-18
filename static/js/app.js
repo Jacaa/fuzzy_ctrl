@@ -9,8 +9,8 @@ $(document).ready(function(){
 
   $('#calc').click(function(){
     getInputs();
-    $('td#speed').text(inputs['speed'])
-    $('td#distance').text(inputs['distance'])
+    $('td#speed').text(inputs['speed']);
+    $('td#distance').text(inputs['distance']);
     $.ajax({
         url: '/',
         type: 'POST',
@@ -19,9 +19,10 @@ $(document).ready(function(){
         success: function(data) {
             console.log('Wysłano dane wejsciowe');
             $('.result-plot').html(data[0])
-            $('#power').text(data[1])},
+            $('#power').text(data[1].toFixed(2))},
         error: function(data) {
-            console.log('ERROR - dane wejsciowe');
+            console.log('Dane nie zostaly wyslane.');
+            alert("Zla wartosc! Predkosc od 1 do 19, Dystans od 1 do 99!")
         }
     }); 
   });
