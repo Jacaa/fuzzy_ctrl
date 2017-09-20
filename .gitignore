@@ -8,4 +8,5 @@
 /.vscode
 /venv/*
 /fuzzy.pyc
-/TODO.txt
+/app.pyc
+/__init__.pyc
